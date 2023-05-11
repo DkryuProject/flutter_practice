@@ -15,9 +15,13 @@ class TestApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter Test Page'),
+          title: null,
         ),
-        body: const TestList(items: ['Item 1', 'Item 2', 'Item 3']),
+        body: const TestList(items: [
+          '저장 테스트',
+          '달력 테스트',
+          '알리 테스트'
+        ]),
       ),
     );
   }

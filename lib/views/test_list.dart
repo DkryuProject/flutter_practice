@@ -10,8 +10,19 @@ class TestList extends StatelessWidget {
     return ListView.builder(
       itemCount: items.length,
       itemBuilder: (BuildContext context, int index) {
-        return ListTile(
-          title: Text(items[index]),
+        return Card(
+          child: ListTile(
+            leading: const Icon(Icons.account_circle),
+            title: Text(items[index]),
+            subtitle: Text('Item $index subtitle'),
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('You clicked on Item $index'),
+                ),
+              );
+            },
+          ),
         );
       },
     );
