@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/views/todo_list.dart';
 import 'views/test_list.dart';
 
 void main() {
@@ -13,16 +14,11 @@ class TestApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Test',
       theme: ThemeData(useMaterial3: true),
-      home: Scaffold(
-        appBar: AppBar(
-          title: null,
-        ),
-        body: const TestList(items: [
-          '저장 테스트',
-          '달력 테스트',
-          '알리 테스트'
-        ]),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => TestList(),
+        '/todo': (context) => const TodoList(),
+      },
     );
   }
 }
