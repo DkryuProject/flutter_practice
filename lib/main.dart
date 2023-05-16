@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/views/todo_list.dart';
+import 'package:provider/provider.dart';
+
+import 'managers/todo.dart';
+import 'views/todo_list.dart';
 import 'views/test_list.dart';
 
 void main() {
-  runApp(const TestApp());
+  runApp(
+    ChangeNotifierProvider<TodoManager>(
+      create: (_) => TodoManager(),
+      child: const TestApp(),
+    ),
+  );
 }
 
 class TestApp extends StatelessWidget {
