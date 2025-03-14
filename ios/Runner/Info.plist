@@ -47,5 +47,7 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSContactsUsageDescription</key>
+    <string>이 앱은 연락처 목록을 불러오는 데 사용됩니다.</string>
 </dict>
 </plist>
