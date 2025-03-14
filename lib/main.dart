@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/views/contract_test.dart';
+import 'package:flutter_project/views/file_test.dart';
+import 'package:flutter_project/views/kakao_test.dart';
 import 'package:provider/provider.dart';
 
 import 'managers/todo.dart';
-import 'views/todo_list.dart';
 import 'views/test_list.dart';
 
 void main() {
@@ -25,7 +27,9 @@ class TestApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => TestList(),
-        '/todo': (context) => const TodoList(),
+        '/file': (context) => const FilePickerTest(),
+        '/contract': (context) => ContractTest(),
+        '/kakao': (context) => KakaoTest(),
       },
     );
   }
