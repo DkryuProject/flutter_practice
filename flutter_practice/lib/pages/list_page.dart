@@ -10,7 +10,7 @@ class ListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> items = ["도로명 주소 테스트", "연락처 테스트", "푸스 테스트"];
+    final List<String> items = ["도로명 주소 테스트", "연락처 테스트"];
 
     return Scaffold(
       appBar: AppBar(title: Text(title)),
